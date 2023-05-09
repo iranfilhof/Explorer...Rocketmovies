@@ -1,7 +1,7 @@
 
 # RocketMovies
 
-RocketMovies é uma aplicação com o objetivo de fazer com que o usuário cadastre um filme, preencha com algumas informações como (nome, descrição, nota) e crie tags relacionadas a ele.
+RocketMovies é uma aplicação com o objetivo de fazer com que o usuário cadastre um filme, preencha com algumas informações como (nome, opinião do filme, nota do mesmo) e criar tags relacionadas a ele.
 ## Demonstração
 
 Clique na imagem abaixo para ver o video de demonstração da aplicação.
