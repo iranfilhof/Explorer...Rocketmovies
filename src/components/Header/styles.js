@@ -12,7 +12,7 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-between;
   
-  padding: 24px 123px;
+  padding: 25.3px 123px;
   
   h2 {
     color: ${({ theme }) => theme.COLORS.PINK}
@@ -20,7 +20,7 @@ export const Container = styled.header`
 
 `;
 
-export const Profile = styled.a`
+export const Profile = styled.div`
   min-width: 320;
   display: flex;
   align-items: center;
@@ -47,12 +47,23 @@ export const Profile = styled.a`
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
 
-    p {
-      font-weight: 400;
+    button {
+      background: none;
+      border-style: none;
+
       display: flex;
       justify-content: end;
+    }
+
+    p {
+      font-weight: 400;
+      
 
       color: ${({ theme }) => theme.COLORS.GRAY_200};
+    }
+
+    > .prop {
+      display: none;
     }
   }
 `;

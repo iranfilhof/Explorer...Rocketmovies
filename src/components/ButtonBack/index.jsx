@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export function ButtonBack({ title }) {
   return (
     <Container>
-      <Link to="/">
+      <Link to={-1}>
         <FiArrowLeft />
         {title}
       </Link>

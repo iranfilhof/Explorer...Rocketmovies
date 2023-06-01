@@ -14,7 +14,7 @@ export const Container = styled.div`
   
   > input {
     height: 56px;
-    width: ${({ isNew }) => isNew ? '150px' : '130px'};
+    width: ${({ isNew }) => isNew ? '135px' : '157px'};
 
     padding: 12px 0 12px 12px;
 

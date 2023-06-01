@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 99.5%;
 
-  padding: 30px 32px;
+  padding: 29.3px 32px;
   margin-bottom: 5px;
 
   border-radius: 16px;

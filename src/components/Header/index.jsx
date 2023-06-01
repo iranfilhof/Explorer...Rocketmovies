@@ -1,24 +1,40 @@
 import { Container, Profile } from './styles'
-import { InputHeader } from '../InputHeader'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../../hooks/auth'
+import { api } from '../../services/api'
 
-export function Header() {
+export function Header({children}) {
+  const { signOut, user } = useAuth()
+
+
+  const navigate = useNavigate()
+
+  function handleSignOut() {
+    navigate("/")
+    signOut()
+  }
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
+
+  
   return (
     <Container>
       <h2>RocketMovies</h2>
 
-      <InputHeader />
+        {children}
 
-      <Link to="/profile">
         <Profile>
           <div>
-            <span>Iran Filho</span>
-            <p>sair</p>
+            <Link to="/profile">
+              <span>{user.name}</span>
+            </Link>
+            <button type='button' onClick={handleSignOut}>
+              <p>sair</p>
+            </button>
           </div>
 
-          <img src="https://github.com/iranfilhof.png" alt="Foto do usuário" />
+          <img src={avatarUrl} alt="Foto do usuário" />
         </Profile>
-      </Link>
     </Container>
   )
 };

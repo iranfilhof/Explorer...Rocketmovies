@@ -5,10 +5,10 @@ import { Rating } from '../Rating'
 
 export function Movie({ rating, data, ...rest}) {
   return (
-    <Container>
+    <Container {...rest}>
       <h2>{data.title}</h2>
-      <Rating grade={rating}/>
-      <p>{data.text}</p>
+      <Rating grade={data.rating}/>
+      <p>{data.description}</p>
 
       <div className='tags'>
         {data.tags.map(tag => <Tags key={tag.id} title={tag.name} />)}
